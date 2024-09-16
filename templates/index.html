@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <p>ClipIt</p>
+            <img src="{{ url_for('static', filename='assets/icon1.jpg') }}" alt="Icon">
+        </div>
+        <div class="main-container">
+            <div class="greet" id="greet-section">
+                <p><span>Hello, Bro</span></p>
+                <p>Which Summary do you Want today?</p>
+            </div>
+            <div class="cards" id="cards-section">
+                <div class="card" data-media-type="image">
+                    <p>IMAGE 2 TEXT <br>image to text summary</p>
+                    <img src="{{ url_for('static', filename='assets/gallery_icon.png') }}" alt="Compass">
+                </div>
+                <div class="card" data-media-type="audio">
+                    <p>AUDIO 2 TEXT <br>audio to text summary</p>
+                    <img src="{{ url_for('static', filename='assets/mic_icon.png') }}" alt="Bulb">
+                </div>
+                <div class="card" data-media-type="text">
+                    <p>TEXT 2 TEXT <br>text to text summary</p>
+                    <img src="{{ url_for('static', filename='assets/message_icon.png') }}" alt="Message">
+                </div>
+                <div class="card" data-media-type="video">
+                    <p>VIDEO 2 TEXT <br>video to text summary</p>
+                    <img src="{{ url_for('static', filename='assets/video.jpg') }}" alt="Code">
+                </div>
+            </div>
+            <!-- Text input section -->
+            <div id="text-input-section" style="display:none;">
+                <input type="text" id="prompts-input" data-media-type="text" placeholder="Enter text for summarization" />
+                <button id="summary-icon">Summarize</button>
+            </div>
+
+            <!-- File input for non-text media types -->
+            <input type="file" id="file-input" style="display:none;" />
+
+            <div class="loading-section" id="loading-section" style="display:none;">
+                <p>Loading... Please wait</p>
+            </div>
+            <div class="output-section" id="output-section" style="display:none;">
+                <div class="input-box" id="input-box" style="border: 3px solid green;">
+                    <p>Input File/Text:</p>
+                    <div id="input-content"></div>
+                </div>
+                <div class="output-box" id="output-box" style="border: 3px solid green;">
+                    <p>Summary:</p>
+                    <div id="summary-content"></div>
+                </div>
+                <div class="slider-container">
+                    <label for="summary-length-slider" class="slider-label"></label>
+                    <input type="range" id="summary-length-slider" min="50" max="500" step="50" value="100" class="vertical-slider">
+                    <div class="slider-values">
+                        <span>500</span>
+                        <span>450</span>
+                        <span>400</span>
+                        <span>350</span>
+                        <span>300</span>
+                        <span>250</span>
+                        <span>200</span>
+                        <span>150</span>
+                        <span>100</span>
+                        <span>50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-bottom">
+            <div class="search-box">
+                <input type="file" id="file-input" style="display:none">
+                <input type="text" id="prompt-input" data-media-type="text" placeholder="Enter a prompt here">
+                <div>
+                    <img src="{{ url_for('static', filename='assets/gallery_icon.png') }}" alt="Gallery" id="Gallery">
+                    <img src="{{ url_for('static', filename='assets/mic_icon.png') }}" alt="Mic" id="Mic">
+                    <img src="{{ url_for('static', filename='assets/send_icon.png') }}" alt="Send" id="send-icon">
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
