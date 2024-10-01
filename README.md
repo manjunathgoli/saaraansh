@@ -42,13 +42,19 @@ Our system demonstrates high performance across multiple tasks, achieving:
 ROUGE-1: 48.21%
 ROUGE-2: 35.31%
 ROUGE-L: 45.67%
+
 Language Translation Accuracy: 96%
+
 Image-Text Extraction:
+
   Word Error Rate (WER): 29.26%
   Character Error Rate (CER): 9.20%
+  
 Audio-Text Extraction:
+
   WER: 25.78%
   CER: 5.33%
+  
 These results show that Omni Summarizer is highly effective for students, researchers, and professionals who need quick summaries from various media types.
 
 Visual Representation 🖼️
@@ -64,7 +70,7 @@ To set up Omni Summarizer, follow these steps:
 
 Clone the repository:
 
-git clone https://github.com/yourusername/omni-summarizer.git
+git clone https: //github.com/manjunathgoli/saaraansh.git
 
 Navigate to the project directory:
 
