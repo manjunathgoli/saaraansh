@@ -3,3 +3,17 @@ transformers
 torch
 easyocr
 langdetect  
+langchain
+sentence_transformers
+torch
+sentencepiece
+transformers
+accelerate
+pypdf
+tiktoken
+streamlit
+fastapi
+uvicorn
+python-multipart
+aiofiles
+chromadb
